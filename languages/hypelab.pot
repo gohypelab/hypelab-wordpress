@@ -1,0 +1,63 @@
+# Copyright (C) 2024 HypeLab
+# This file is distributed under the same license as the HypeLab for WordPress plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: HypeLab for WordPress 0.0.1\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/hypelab\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2024-01-23T02:03:07+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.9.0\n"
+"X-Domain: hypelab\n"
+
+#. Plugin Name of the plugin
+msgid "HypeLab for WordPress"
+msgstr ""
+
+#. Description of the plugin
+msgid "Serve HypeLab ads on your WordPress site"
+msgstr ""
+
+#. Author of the plugin
+#: includes/admin.php:41
+#: includes/admin.php:42
+#: includes/admin/general.php:16
+msgid "HypeLab"
+msgstr ""
+
+#: includes/admin/general.php:17
+msgid "General"
+msgstr ""
+
+#: includes/admin/settings.php:16
+msgid "HypeLab Settings"
+msgstr ""
+
+#: includes/admin/settings.php:17
+#: includes/admin/settings.php:30
+msgid "Settings"
+msgstr ""
+
+#: includes/admin/settings.php:35
+msgid "Property Slug"
+msgstr ""
+
+#: includes/admin/settings.php:41
+msgid "URL"
+msgstr ""
+
+#: includes/admin/settings.php:47
+msgid "Environment"
+msgstr ""
+
+#: partials/admin/general.php:5
+msgid "Welcome to HypeLab for WordPress"
+msgstr ""
+
+#: partials/admin/general.php:6
+msgid "Thanks for installing the HypeLab plugin! To get started, visit the settings page to configure the SDK."
+msgstr ""
