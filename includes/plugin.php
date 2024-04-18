@@ -42,17 +42,15 @@ class Plugin {
 	 */
   public static function wp_head() {
     $property_slug = get_option('hypelab_property_slug', '');
-    $url = get_option('hypelab_url', '');
     $environment = get_option('hypelab_environment', '');
 
-    if (!empty($property_slug) && !empty($url) && !empty($environment)) {
+    if (!empty($property_slug) && !empty($environment)) {
       echo <<<EOT
       <script>
         document.addEventListener('DOMContentLoaded', function() {
           HypeLab.initialize({
-            propertySlug: '{$property_slug}',
-            URL: '{$url}',
             environment: '{$environment}',
+            propertySlug: '{$property_slug}',
           });
         });
       </script>

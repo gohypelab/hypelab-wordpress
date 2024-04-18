@@ -15,10 +15,14 @@ HypeLab for WordPress is a plugin that allows you to add HypeLab banner, native,
 
 == Usage ==
 First, configure the HypeLab plugin by visiting to HypeLab > Settings in your WordPress dashboard.
-Then, enter your HypeLab property slug and select the appropriate URL and environment. 
+Then, enter your HypeLab property slug and select the appropriate environment. 
 After saving your changes you are now ready to add placements to your site!
 Visit our [documentation site](https://docs.hypelab.com) to view documentation about adding banner, native, and rewarded placements.
 
 == Changelog ==
+
+= 0.0.2 =
+* Settings page updated
+
 = 0.0.1 =
 * Initial release

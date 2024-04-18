@@ -22,7 +22,6 @@ class Settings extends Page
 	{
 		// Register settings
 		self::register_setting('hypelab_property_slug', ['type' => 'string', 'default' => '']);
-		self::register_setting('hypelab_url', ['type' => 'string', 'default' => '']);
 		self::register_setting('hypelab_environment', ['type' => 'string', 'default' => '']);
 		// Add sections & fields
 		self::add_section(
@@ -34,12 +33,6 @@ class Settings extends Page
       'property_slug',
       __('Property Slug', 'hypelab'),
       'property_slug_field',
-      'settings',
-    );
-    self::add_field(
-      'url',
-      __('URL', 'hypelab'),
-      'url_field',
       'settings',
     );
     self::add_field(
@@ -67,25 +60,6 @@ class Settings extends Page
 			'name' => 'hypelab_property_slug',
 			'value' => get_option('hypelab_property_slug', ''),
 		]);
-	}
-
-	/**
-   * Render url field
-	 */
-	public static function url_field()
-	{
-    $current = get_option('hypelab_url', '');
-    $options = [
-      'https://api.hypelab.com',
-      'https://api.hypelab-staging.com',
-    ];
-
-    foreach ($options as $key => $option) {
-      ?>
-        <input id="hypelab_url_<?php echo $key; ?>" name="hypelab_url" type="radio" value="<?php echo $option; ?>" <?php checked($current, $option); ?> />
-        <label for="hypelab_url_<?php echo $key; ?>"><?php echo $option; ?></label><br />
-      <?php
-    }
 	}
 
 	/**
