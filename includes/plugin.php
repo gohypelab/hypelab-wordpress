@@ -34,7 +34,17 @@ class Plugin {
  	 * Method run on wp_enqueue_scripts hook
 	 */
   public static function wp_enqueue_scripts() {
-    wp_enqueue_script('hypelab', 'https://api.hypelab.com/v1/scripts/hp-sdk.js?v=0', [], null, [ 'strategy' => 'defer' ]);
+    $defer_script_loading = get_option('hypelab_deferred_loading', false);
+    $script_url = 'https://api.hypelab.com/v1/scripts/hp-sdk.js?v=0';
+    $script_handle = 'hypelab';
+    
+    if ($defer_script_loading) {
+      // Enqueue the script with 'defer' attribute
+      wp_enqueue_script($script_handle, $script_url, [], null, [ 'strategy' => 'defer' ]);
+    } else {
+      // Enqueue the script without any special attributes
+      wp_enqueue_script($script_handle, $script_url, [], null, []);
+    }
   }
 
 	/**

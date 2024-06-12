@@ -21,6 +21,9 @@ Visit our [documentation site](https://docs.hypelab.com) to view documentation a
 
 == Changelog ==
 
+= 0.0.3 =
+* Added setting for deferred loading
+
 = 0.0.2 =
 * Settings page updated
 

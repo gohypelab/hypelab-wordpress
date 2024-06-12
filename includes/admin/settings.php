@@ -23,6 +23,8 @@ class Settings extends Page
 		// Register settings
 		self::register_setting('hypelab_property_slug', ['type' => 'string', 'default' => '']);
 		self::register_setting('hypelab_environment', ['type' => 'string', 'default' => '']);
+    self::register_setting('hypelab_deferred_loading', ['type' => 'boolean', 'default' => false]);
+
 		// Add sections & fields
 		self::add_section(
 			'settings',
@@ -39,6 +41,12 @@ class Settings extends Page
       'environment',
       __('Environment', 'hypelab'),
       'environment_field',
+      'settings',
+    );
+    self::add_field(
+      'deferred_loading',
+      __('Defer Script Loading', 'hypelab'),
+      'deferred_loading_field',
       'settings',
     );
 	}
@@ -80,4 +88,16 @@ class Settings extends Page
       <?php
     }
 	}
+
+  /**
+   * Render deferred loading toggle field
+   */
+  public static function deferred_loading_field()
+  {
+    $current = get_option('hypelab_deferred_loading', false);
+    ?>
+      <input id="hypelab_deferred_loading" name="hypelab_deferred_loading" type="checkbox" value="1" <?php checked($current, 1); ?> />
+      <label for="hypelab_deferred_loading"><?php _e('Enable deferred loading', 'hypelab'); ?></label>
+    <?php
+  }
 }
